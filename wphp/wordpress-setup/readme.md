@@ -15,7 +15,7 @@ unzip and move wordpress folder to development folder
 
 ---
 
-$ sudo chown -R daemon:wordpress newname //allows for direct site editing and allows current user to still view files and folders in linux command terminal without sudo
+	sudo chown -R daemon:wordpress newname //allows for direct site editing and allows current user to still view files and folders in linux command terminal without sudo
 $ sudo find wp-content -type d -exec chmod 755 {} \;
 $ sudo find wp-content -type f -exec chmod 644 {} \;	
 

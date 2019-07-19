@@ -1,17 +1,31 @@
 # Wordpress setup localhost
 
 ## 1. Download latest version of [wordpress](https://wordpress.org/latest.zip)
-unzip and move wordpress folder to development folder
+
+1. unzip and move wordpress folder to development folder
+
 	mv ~/Downloads/wordpress ~/websites/newname //change directory name to newname
 
-## 2. Setting permissions
+2. create a symlink from working directory to xampp directory
 
-	sudo apt install members //for easier member lists
-	sudo groupadd wordpress //creates a group called wordpress
-	sudo usermod -a -G wordpress abufrank // append user abufrank to group wordpress
-	sudo usermod -a -G wordpress daemon  // append user daemon to group wordpress
-	members wordpress // check that users were added (lists members of group wordpress)
-	subl /etc/group // to check group file directly
+	sudo ln -s ~/Documents/websites/newname /opt/lampp/htdocs/newname
+
+3. create [database](localhost:200/phpmyadmin)
+* set utf_general_ci
+* add user with full permissions and password
+* update wp-config.php file
+* navigate to wordpress install, create blog
+
+4. set permissions
+* change wp-config.php
+	
+	chmod 600 wp-config.php
+
+* add group wordpress to wp-content and give full group permissions
+
+	chown -R abufrank:wordpress wp-content
+	find wp-content -type d -exec chmod 775 {} \;
+	find wp-content -type f -exec chmod 664 {} \;
 
 ---
 

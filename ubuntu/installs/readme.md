@@ -10,6 +10,15 @@
 
 ## Install XAMPP
 
+1. Set up wordpress group and add daemon and user
+
+	sudo apt install members //for easier member lists, optional
+	sudo groupadd wordpress //creates a group called wordpress
+	sudo usermod -a -G wordpress abufrank // append user abufrank to group wordpress
+	sudo usermod -a -G wordpress daemon  // append user daemon to group wordpress
+	members wordpress // check that users were added (lists members of group wordpress), optional
+	subl /etc/group // to check group file directly
+
 2. set up server
 
 Search for "list 80" change it to "listen 200":

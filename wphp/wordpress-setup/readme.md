@@ -14,6 +14,12 @@
 * set utf_general_ci
 * add user with full permissions and password
 * update wp-config.php file
+* bypass ftp
+	
+	```
+	define('FS_METHOD','direct');
+	```
+
 * navigate to wordpress install, create blog
 
 4. set permissions

@@ -1,7 +1,7 @@
 # Wordpress setup localhost
 
 ## 1. Download latest version of [wordpress](https://wordpress.org/latest.zip)
-unzip and move wordpress folder to /opt/lampp/htdocs
+unzip and move wordpress folder to development folder
 	mv ~/Downloads/wordpress ~/websites/newname //change directory name to newname
 
 ## 2. Setting permissions

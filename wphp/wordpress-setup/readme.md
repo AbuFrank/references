@@ -3,15 +3,17 @@
 ## 1. Download latest version of [wordpress](https://wordpress.org/latest.zip)
 
 1. unzip and move wordpress folder to development folder
-
+	```
 	mv ~/Downloads/wordpress ~/websites/newname //change directory name to newname
-
+	```
 2. create a symlink from working directory to xampp directory
 
+	```
 	sudo ln -s ~/Documents/websites/newname /opt/lampp/htdocs/newname
+	```
 
 3. create [database](localhost:200/phpmyadmin)
-* set utf_general_ci
+* set utf8_general_ci
 * add user with full permissions and password
 * update wp-config.php file
 * bypass ftp

@@ -1,14 +1,20 @@
-Wordpress
-download latest version from download page
+# Wordpress setup localhost
+
+## 1. Download latest version of [wordpress](https://wordpress.org/latest.zip)
 unzip and move wordpress folder to /opt/lampp/htdocs
-$ sudo mv wordpress newname //change directory name to newname
-Setting permissions
-$ sudo apt-get install members //for easier member lists
-$ sudo groupadd wordpress //creates a group called wordpress
-$ sudo usermod -a -G wordpress abufrank // append user abufrank to group wordpress
-$ sudo usermod -a -G wordpress daemon  // append user daemon to group wordpress
-$ members wordpress // check that users were added (lists members of group wordpress)
--------
+	mv ~/Downloads/wordpress ~/websites/newname //change directory name to newname
+
+## 2. Setting permissions
+
+	sudo apt install members //for easier member lists
+	sudo groupadd wordpress //creates a group called wordpress
+	sudo usermod -a -G wordpress abufrank // append user abufrank to group wordpress
+	sudo usermod -a -G wordpress daemon  // append user daemon to group wordpress
+	members wordpress // check that users were added (lists members of group wordpress)
+	subl /etc/group // to check group file directly
+
+---
+
 $ sudo chown -R daemon:wordpress newname //allows for direct site editing and allows current user to still view files and folders in linux command terminal without sudo
 $ sudo find wp-content -type d -exec chmod 755 {} \;
 $ sudo find wp-content -type f -exec chmod 644 {} \;	

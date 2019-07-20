@@ -27,3 +27,8 @@
 	```
 	git push -u nickname master
 	```
+
+* Set local head to point to track remote
+	```
+	git branch --set-upstream-to=origin/<branch> master
+	```

@@ -13,17 +13,17 @@
 
 # Set upstreams
 	
-	* Add upstream repository called nickname 
+* Add upstream repository called nickname 
 	```
 	git remote add nickname https://github.com/AbuFrank/Your-Repository.git
 	```
 	
-	* Change repository url for nickname
+* Change repository url for nickname
 	```
 	git remote set-url nickname https://github.com/username/repository.git
 	```
 	
-	* Push and set upstream to nickname master branch
+* Push and set upstream to nickname master branch
 	```
 	git push -u nickname master
 	```

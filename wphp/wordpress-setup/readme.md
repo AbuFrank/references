@@ -4,60 +4,37 @@
 
 1. unzip and move wordpress folder to development folder
 
+	```
 	mv ~/Downloads/wordpress ~/websites/newname //change directory name to newname
-
+	```
 2. create a symlink from working directory to xampp directory
 
+	```
 	sudo ln -s ~/Documents/websites/newname /opt/lampp/htdocs/newname
-
+	```
 3. create [database](localhost:200/phpmyadmin)
-* set utf_general_ci
+* set utf8_general_ci
 * add user with full permissions and password
 * update wp-config.php file
+* bypass ftp
+	
+	```
+	define('FS_METHOD','direct');
+	```
+
 * navigate to wordpress install, create blog
 
 4. set permissions
 * change wp-config.php
 	
-	chmod 660 wp-config.php
+	```
+	sudo chown abufrank:wordpress wp-config.php
+	sudo chmod 640 wp-config.php
+	```
+* add wordpress group and include write access for groups
 
-* add group wordpress to wp-content and give full group permissions
-
-	chown -R abufrank:wordpress wp-content
+	```
+	sudo chown -R abufrank:wordpress wp-content
 	find wp-content -type d -exec chmod 775 {} \;
 	find wp-content -type f -exec chmod 664 {} \;
-
----
-
-	sudo chown -R daemon:wordpress newname //allows for direct site editing and allows current user to still view files and folders in linux command terminal without sudo
-$ sudo find wp-content -type d -exec chmod 755 {} \;
-$ sudo find wp-content -type f -exec chmod 644 {} \;	
-
-**to reader: “newname” will be the example site for the runthrough
-Create database
-navigate to localhost/phpmyadmin, login
-create a new database with collation: utf8_general_ci
-Install Wordpress
-navigate to localhost/newname follow prompts
-Theme screenshot should be 1200x900
-Add Understrap
-//copy understrap theme and child theme files from repository to local
-//navigate to local wordpress themes folder
-$ sudo git clone https://github.com/understrap/understrap.git
-$ sudo git clone https://github.com/understrap/understrap-child.git
-//Change where local git points to
-sudo git remote set-url origin https://github.com/username/repository.git
-//verify
-$ git remote -v
-//push local contents to personal repository
-$ sudo git push -u origin master
-Bootstrap Navbar
-navigate to theme folder (.../wp-content/themes/newname)
-$ sudo wget “url” //to download the wp-navwalker. Download links: v.3 and v.master
-add this to the functions.php:
-	// Register Custom Navigation Walker
-require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-Animate CSS
-
-Widgets
-
+	```

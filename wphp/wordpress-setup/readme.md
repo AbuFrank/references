@@ -19,7 +19,7 @@
 4. set permissions
 * change wp-config.php
 	
-	chmod 600 wp-config.php
+	chmod 660 wp-config.php
 
 * add group wordpress to wp-content and give full group permissions
 

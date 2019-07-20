@@ -6,13 +6,11 @@
 
 	```
 	mv ~/Downloads/wordpress ~/websites/newname //change directory name to newname
-
 	```
 2. create a symlink from working directory to xampp directory
 
 	```
 	sudo ln -s ~/Documents/websites/newname /opt/lampp/htdocs/newname
-
 	```
 3. create [database](localhost:200/phpmyadmin)
 * set utf8_general_ci
@@ -22,7 +20,6 @@
 	
 	```
 	define('FS_METHOD','direct');
-
 	```
 
 * navigate to wordpress install, create blog
@@ -31,13 +28,13 @@
 * change wp-config.php
 	
 	```
-	chmod 600 wp-config.php
+	sudo chown abufrank:wordpress wp-config.php
+	sudo chmod 640 wp-config.php
+	```
+* add wordpress group and include write access for groups
 
 	```
-* add group wordpress to wp-content and give full group permissions
-
-	```
-	chown -R abufrank:wordpress wp-content
+	sudo chown -R abufrank:wordpress wp-content
 	find wp-content -type d -exec chmod 775 {} \;
 	find wp-content -type f -exec chmod 664 {} \;
 

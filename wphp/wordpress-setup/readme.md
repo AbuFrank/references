@@ -12,11 +12,11 @@
 	```
 	sudo ln -s ~/Documents/websites/newname /opt/lampp/htdocs/newname
 	```
-3. create [database](localhost:200/phpmyadmin)
+3. create [database](https://github.com/AbuFrank/references/tree/master/ubuntu/mysql)
 * set utf8_general_ci
 * add user with full permissions and password
 * update wp-config.php file
-* bypass ftp
+* bypass ftp (only on development environments where network access is turned off)
 	
 	```
 	define('FS_METHOD','direct');
@@ -37,5 +37,4 @@
 	sudo chown -R abufrank:wordpress wp-content
 	find wp-content -type d -exec chmod 775 {} \;
 	find wp-content -type f -exec chmod 664 {} \;
-
 	```

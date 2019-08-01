@@ -17,18 +17,18 @@
 	```
 	git remote add nickname https://github.com/AbuFrank/Your-Repository.git
 	```
-	
 * Change repository url for nickname
 	```
 	git remote set-url nickname https://github.com/username/repository.git
 	```
-	
 * Push and set upstream to nickname master branch
 	```
 	git push -u nickname master
 	```
-
 * Set local head to point to track remote
 	```
 	git branch --set-upstream-to=origin/<branch> master
 	```
+## Hard pull from repository
+	git fetch --all
+	git reset --hard origin/master

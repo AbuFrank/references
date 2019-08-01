@@ -1,6 +1,8 @@
-## Online Interactive Tutorial:
+## Helpful Links 
 
-[regexr.com](https://regexr.com/)
+Online Interactive Tutorial: [regexr.com](https://regexr.com/)  
+[Adam's Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)  
+Writing on Github: [github reference](https://help.github.com/en/categories/writing-on-github)
 
 ## Cheatsheet
 

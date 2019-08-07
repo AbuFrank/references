@@ -3,8 +3,9 @@ This serves as quick but incomplete set of formatting rules for markdown files
 
 ## 1. External Links
 
-Links will auto create: https://github.com  
-Or create your own [Hyperlink](https://github.com)
+Links will auto create: https://help.github.com/en/articles/basic-writing-and-formatting-syntax
+
+Or create your own [GitHub markdown guide hyperlink](https://help.github.com/en/articles/basic-writing-and-formatting-syntax)
 
 ## 2. Codeblocks
 

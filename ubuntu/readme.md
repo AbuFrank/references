@@ -2,12 +2,14 @@
 Commonly used terminal commands for general file/directory interactions that are infrequent enough to forget
 
 ## Contents
-1 Moving multiple files at once
-2 For checking existing installation packages
-3 Show dependencies for a program
-4 Search keyword in repositories
-5 Search for installed libraries
-6 Create symbolic link, a shortcut
+1. Moving multiple files at once
+2. For checking existing installation packages
+3. Verify file integrity
+4. Show dependencies for a program
+5. Search keyword in repositories
+6. Search for installed libraries
+7. Create symbolic link, a shortcut
+8. Calculate disk usage for particular directories
 
 
 ## 1. Moving multiple files at once

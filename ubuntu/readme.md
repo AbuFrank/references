@@ -46,3 +46,18 @@ I always prefer this one as it shows other packages that has the pattern `vim` i
 ```-s``` summarize  disk usage for top-most directory  
 ```-h``` human readable format  
 example output: ```6.3M /etc/```
+
+	du -a /etc/ | sort -n -r | head -n 10
+
+example output: 
+
+	8128	/etc/
+	928	/etc/ssl
+	904	/etc/ssl/certs
+	656	/etc/apache2
+	544	/etc/apache2/mods-available
+	484	/etc/init.d
+	396	/etc/php5
+	336	/etc/sane.d
+	308	/etc/X11
+	268	/etc/ssl/certs/ca-certificates.crt

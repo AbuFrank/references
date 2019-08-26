@@ -47,6 +47,7 @@ I always prefer this one as it shows other packages that has the pattern `vim` i
 ```-h``` human readable format  
 example output: ```6.3M /etc/```
 
+### List the top 10 directories eating disk space in /etc/
 	du -a /etc/ | sort -n -r | head -n 10
 
 example output: 

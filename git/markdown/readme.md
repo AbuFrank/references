@@ -9,9 +9,11 @@ Or create your own [GitHub markdown guide hyperlink](https://help.github.com/en/
 
 ## 2. Codeblocks
 
-Use tab -or four spaces- to create a codeblock
+Use tab or four spaces to create a codeblock
 
     code
+    
+Or wrap with backticks for `inline code`
     
 ## 3. Bullets
 

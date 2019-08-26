@@ -10,12 +10,12 @@ Commonly used terminal commands for general file/directory interactions that are
 6 Create symbolic link, a shortcut
 
 
-##1. Moving multiple files at once
+## 1. Moving multiple files at once
 	mv -t <destination> <src1> <src2> … <srcN>
 or
 	mv <file1> <file2> <file3> -t <destination>
 
-##2. For checking existing installation packages
+## 2. For checking existing installation packages
 	dpkg -s vim
 	
 I always prefer this one as it shows other packages that has the pattern `vim` in their names, very useful in some cases
@@ -24,26 +24,25 @@ I always prefer this one as it shows other packages that has the pattern `vim` i
 	dpkg -l vim
 	apt-cache policy vim
 
-##3. Verify file integrity
+## 3. Verify file integrity
 	echo "8dd10000eb1b768800000e1d2fe1c3100005d2dc *filename" | sha1sum -c -
 
-##4. Show dependencies for a program
+## 4. Show dependencies for a program
 	objdump -p /path/to/program | grep NEEDED
 
-##5. Search keyword in repositories
+## 5. Search keyword in repositories
 	apt-cache search keyword
 	apt-cache policy keyword (for more info, e.g. version)
 
-##6. Search for installed libraries
+## 6. Search for installed libraries
 	ldconfig -p | grep ‘keyword’
 
-##7. Create symbolic link, a shortcut
+## 7. Create symbolic link, a shortcut
 	ln -s source_file myfile
 
-##8. Calculate disk usage for particular directories. See a [nixCraft](https://www.cyberciti.biz/faq/linux-check-disk-space-command/) post about it.
+## 8. Calculate disk usage for particular directories. See a [nixCraft](https://www.cyberciti.biz/faq/linux-check-disk-space-command/) post about it.
 	du -sh /etc/
 
-```-s``` summarize  disk usage for top-most directory
-```-h``` human readable format 
-example output:
-```//6.3M /etc/```
+```-s``` summarize  disk usage for top-most directory  
+```-h``` human readable format  
+example output: ```6.3M /etc/```

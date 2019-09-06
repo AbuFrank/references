@@ -28,3 +28,16 @@ Search for testport 80 and 443 change them to 200 and 500 respectively:
 Restart xampp:
 	
 	sudo /opt/lampp/lampp restart
+
+# MySql
+
+## 1. How to change the root user name
+
+Log into mySQL 
+
+	/opt/lampp/bin/mysql -uroot -p
+
+* The ```-uroot``` is logging into "user" named "root".
+* The ```-p``` is anticipating password. Drop it if root has no password.
+
+## 2. 

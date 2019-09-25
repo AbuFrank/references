@@ -10,6 +10,7 @@ Commonly used terminal commands for general file/directory interactions that are
 6. Search for installed libraries
 7. Create symbolic link, a shortcut
 8. Calculate disk usage for particular directories
+9. zip, gz, tar
 
 
 ## 1. Moving multiple files at once
@@ -64,3 +65,12 @@ example output:
 	336	/etc/sane.d
 	308	/etc/X11
 	268	/etc/ssl/certs/ca-certificates.crt
+
+## 9. zip, gzip, tar
+
+### zip
+type zip or unzip alone to see a list of commands and general usage
+
+unzip `file.zip` 
+
+`unzip file.zip`

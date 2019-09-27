@@ -15,7 +15,8 @@ Commonly used terminal commands for general file/directory interactions that are
 
 ## 1. Moving multiple files at once
 	mv -t <destination> <src1> <src2> … <srcN>
-or
+-- or -- 
+
 	mv <file1> <file2> <file3> -t <destination>
 
 ## 2. For checking existing installation packages

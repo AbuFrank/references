@@ -23,6 +23,7 @@ Commonly used terminal commands for general file/directory interactions that are
 	dpkg -s vim
 	
 I always prefer this one as it shows other packages that has the pattern `vim` in their names, very useful in some cases
+	
 	dpkg --get-selections | grep 'vim'
 
 	dpkg -l vim

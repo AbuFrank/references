@@ -1,5 +1,7 @@
 # Install
 
+[XAMPP faq](https://www.apachefriends.org/faq_linux.html)
+
 # Configure XAMPP
 
 ## 1. Set up wordpress group and add daemon and user
@@ -10,6 +12,25 @@
 	sudo usermod -a -G wordpress daemon  // append user daemon to group wordpress
 	members wordpress // check that users were added (lists members of group wordpress), optional
 	subl /etc/group // to check group file directly
+
+## 2. kill default apache2 in lieu of XAMPP
+
+Look for network calls using port 80:
+
+`sudo netstat -nap | grep :80`
+
+returns something like this:
+```
+tcp6       0      0 :::80                   :::*
+LISTEN      980/apache2
+```
+Kill the server that is running apache2:
+
+`sudo kill 980`
+
+Make sure xampp runs:
+
+`sudo /opt/lampp/lampp start`
 
 ## 2. set up server
 

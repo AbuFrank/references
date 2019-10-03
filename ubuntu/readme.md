@@ -11,6 +11,7 @@ Commonly used terminal commands for general file/directory interactions that are
 7. Create symbolic link, a shortcut
 8. Calculate disk usage for particular directories
 9. zip, gz, tar
+10. Check kernel version
 
 
 ## 1. Moving multiple files at once
@@ -73,6 +74,10 @@ example output:
 ### zip
 type zip or unzip alone to see a list of commands and general usage
 
-unzip `file.zip` 
-
 `unzip file.zip`
+
+## 10. Check kernel version
+
+1. `uname -srm`
+2. `hostnamectl`
+3. `cat /proc/version`

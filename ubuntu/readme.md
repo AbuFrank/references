@@ -45,6 +45,9 @@ I always prefer this one as it shows other packages that has the pattern `vim` i
 
 ## 7. Create symbolic link, a shortcut
 	ln -s source_file myfile
+Find the source of a symbolic link:
+	
+	ls -la myfile
 
 ## 8. Calculate disk usage for particular directories. See a [nixCraft](https://www.cyberciti.biz/faq/linux-check-disk-space-command/) post about it.
 	du -sh /etc/

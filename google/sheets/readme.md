@@ -12,7 +12,7 @@ Change color of a row if a cell matches a certain value:
  - Highlight a row and click conditional formatting
  - Select custom formula is and enter
     ```
-    =RegExMatch($D2,"(?i)Complete")
+    =RegExMatch($B2,"(?i)Missing")
     ```
-The $ keeps the reference value (D2) locked, rather than looking to E2 for example.
-the (?i) is a regex shorthand for case insensitive
+The $ keeps the reference value (B2) locked, rather than looking to E2 for the next cell, for example.
+The (?i) is a regex shorthand for case insensitive

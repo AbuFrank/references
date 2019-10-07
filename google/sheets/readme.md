@@ -14,5 +14,5 @@ Change color of a row if a cell matches a certain value:
     ```
     =RegExMatch($B2,"(?i)Missing")
     ```
-The $ keeps the reference value (B2) locked, rather than looking to E2 for the next cell, for example.
+The $ keeps the reference value (B2) locked, rather than looking to C2 for the next cell, for example.
 The (?i) is a regex shorthand for case insensitive

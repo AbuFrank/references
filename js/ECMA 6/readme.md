@@ -32,3 +32,19 @@ How to keep your HTML strings neat:
                                 //     <h1>Title</h1>
                                 // </div>
   ```
+Substitutions:
+  ```js
+  let name = "Abufrank";
+      message = `Hello, ${name}.`;
+      
+  console.log(message);         // "Hello, Abufrank."
+  ```
+Calculations:
+  ```js
+  let count = 10,
+      price = 0.25,
+      message = `${count} items cost $${(count * price).toFixed(2)}.`;
+      
+  console.log(message);         // "10 items cost $2.50."
+  ```
+The first `$` in `$${count}` is kept literal because there is no `{` following it

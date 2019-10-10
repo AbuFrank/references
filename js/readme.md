@@ -27,6 +27,7 @@ window.XMLHttpRequest.prototype.open = oldOpenPrototype;
 ```
 ## 2. Memorize results for more efficient recursive functions
 
+Memoize function and examples originally by Douglas Crockford in Javascript: the Good Parts
 Create memoize function:
   ```js
   var memoizer = function (memo, formula) {

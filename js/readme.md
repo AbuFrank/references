@@ -2,8 +2,8 @@
 1. Log network passes
 2. Memorize results for more efficient recursive functions
 
-##1. log network passes
-```
+## 1. log network passes
+```js
 var oldOpenPrototype = window.XMLHttpRequest.prototype.open;
 var requestId = 0;
 
@@ -25,10 +25,10 @@ To return interface to normal:
 ```
 window.XMLHttpRequest.prototype.open = oldOpenPrototype;
 ```
-##2. Memorize results for more efficient recursive functions
+## 2. Memorize results for more efficient recursive functions
 
 Create memoize function:
-  ```
+  ```js
   var memoizer = function (memo, formula) {
       var recur = function (n) {
           var result - memo[n];

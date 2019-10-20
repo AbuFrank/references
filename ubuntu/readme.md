@@ -12,6 +12,7 @@ Commonly used terminal commands for general file/directory interactions that are
 8. Calculate disk usage for particular directories
 9. zip, gz, tar
 10. Check kernel or desktop version
+11. Clean up unused files and apt cache
 
 
 ## 1. Moving multiple files at once
@@ -87,3 +88,20 @@ type zip or unzip alone to see a list of commands and general usage
 
 For Desktop
 `ps -A | egrep -i "gnome|kde|mate|cinnamon|lxde|xfce|jwm"`
+
+## 11. Clean up unused files and apt cache
+1. Clean up partial package:
+
+`sudo apt autoclean`
+
+2. Clean apt cache
+
+`sudo apt-get clean`
+
+3. Remove unused dependencies
+
+`sudo apt autoremove`
+
+4. Prevent uninstalled programs from leaving behind files
+
+`sudo apt autoremove <application>`

@@ -1,4 +1,10 @@
-# Run Jquery in the Chrome console
+### Copy text from webpage to clipboard
+	
+```js
+copy( document.body.innerText );
+```
+
+### Run Jquery in the Chrome console
 
 Paste this code into your chrome console:
 

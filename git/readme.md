@@ -12,7 +12,10 @@
 	sudo git config --global core.editor "subl -w" // to change text editor to subl and have it wait ( -w ) for user to close file before sending off
 
 # Set upstreams
-	
+* Add upstream repository called nickname 
+	```
+	git branch --set-upstream <remote-branch>
+	```
 * Add upstream repository called nickname 
 	```
 	git remote add nickname https://github.com/AbuFrank/Your-Repository.git

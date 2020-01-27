@@ -14,10 +14,6 @@
 # Set upstreams
 * Add upstream repository called nickname 
 	```
-	git branch --set-upstream <remote-branch>
-	```
-* Add upstream repository called nickname 
-	```
 	git remote add nickname https://github.com/AbuFrank/Your-Repository.git
 	```
 * Change repository url for nickname

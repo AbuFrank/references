@@ -15,14 +15,19 @@
 ```
 # Add upstream repository called nickname 
 git remote add <nickname> <url>
+
 # Change repository url for nickname
 git remote set-url <nickname> <other url>
+
 # Push and set upstream to nickname's branch
 git push -u <nickname> <branch>
+
 # Set local head to point to track remote
 git branch --set-upstream-to=origin/<branch> master
+
 # Remove upstream
 git remote rm <nickname>
+
 #list upstreams
 git remote -v
 ```
@@ -42,3 +47,13 @@ git remote -v
 !*.two
 !*.etc
 ```
+
+## Undo add and commit
+```
+# Undo add <file>
+git reset <file>
+
+# Undo add .
+git reset
+
+# Undo commit

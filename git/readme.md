@@ -14,19 +14,23 @@
 # Set upstreams
 * Add upstream repository called nickname 
 	```
-	git remote add nickname https://github.com/AbuFrank/Your-Repository.git
+	git remote add <nickname> <url>
 	```
 * Change repository url for nickname
 	```
-	git remote set-url nickname https://github.com/username/repository.git
+	git remote set-url <nickname> <other url>
 	```
-* Push and set upstream to nickname master branch
+* Push and set upstream to nickname's branch
 	```
-	git push -u nickname master
+	git push -u <nickname> <branch>
 	```
 * Set local head to point to track remote
 	```
 	git branch --set-upstream-to=origin/<branch> master
+	```
+* Remove upstream
+	```
+	git remote rm <nickname>
 	```
 ## Hard pull from repository
 	git fetch --all

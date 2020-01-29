@@ -55,5 +55,22 @@ git reset <file>
 
 # Undo add .
 git reset
+```
+## sample .gitignore
+```
+# Ignore everything in top-most directory
+/*
 
-# Undo commit
+# whitelist certain files
+!.gitignore
+!header.php
+
+#whitelist certain nested folders and their contents
+!sass/
+sass/*
+!sass/theme
+
+!fonts/
+fonts/*
+!fonts/gotham
+```

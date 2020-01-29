@@ -38,12 +38,12 @@
 
 # Blacklisting/Whitelisting files and folders
 ```
-	# First, ignore everything
-	*
-	# Now, whitelist anything that's a directory
-	!*/
-	# And all the file types you're interested in.
-	!*.one
-	!*.two
-	!*.etc
+# First, ignore everything
+*
+# Now, whitelist anything that's a directory
+!*/
+# And all the file types you're interested in.
+!*.one
+!*.two
+!*.etc
 ```

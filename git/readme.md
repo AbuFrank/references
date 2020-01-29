@@ -37,7 +37,7 @@
 	git reset --hard origin/master
 
 # Blacklisting/Whitelisting files and folders
-	```
+```
 	# First, ignore everything
 	*
 	# Now, whitelist anything that's a directory
@@ -46,4 +46,4 @@
 	!*.one
 	!*.two
 	!*.etc
-	```
+```

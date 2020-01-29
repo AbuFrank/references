@@ -11,7 +11,7 @@
 	git config --global user.email johndoe@example.com
 	sudo git config --global core.editor "subl -w" // to change text editor to subl and have it wait ( -w ) for user to close file before sending off
 
-## Set upstreams
+## Upstreams
 ```
 # Add upstream repository called nickname 
 git remote add <nickname> <url>
@@ -23,6 +23,8 @@ git push -u <nickname> <branch>
 git branch --set-upstream-to=origin/<branch> master
 # Remove upstream
 git remote rm <nickname>
+#list upstreams
+git remote -v
 ```
 
 ## Hard pull from repository

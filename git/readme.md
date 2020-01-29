@@ -35,3 +35,15 @@
 ## Hard pull from repository
 	git fetch --all
 	git reset --hard origin/master
+
+# Blacklisting/Whitelisting files and folders
+	```
+	# First, ignore everything
+	*
+	# Now, whitelist anything that's a directory
+	!*/
+	# And all the file types you're interested in.
+	!*.one
+	!*.two
+	!*.etc
+	```

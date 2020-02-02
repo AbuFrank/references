@@ -15,3 +15,22 @@ function creative_styles() {
     );
 }
 ```
+
+## Custom Admin Scripts/Styles with Page Filter
+```php
+/**
+ * @param int $hook Hook suffix for the current admin page.
+ */
+function selective_enqueue_scripts( $hook ) {
+    if ( 'edit.php' != $hook ) {
+        return;
+    }
+    wp_enqueue_script( 'my_custom_script', plugin_dir_url( __FILE__ ) . 'myscript.js', array(), '1.0' );
+}
+add_action( 'admin_enqueue_scripts', 'wpdocs_selectively_enqueue_admin_script' );
+```
+### Note: to find the hook for a given admin page use:
+```php
+$screen = get_current_screen(); 
+print_r($screen);
+```

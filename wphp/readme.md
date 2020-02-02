@@ -19,18 +19,35 @@ function creative_styles() {
 ## Custom Admin Scripts/Styles with Page Filter
 ```php
 /**
- * @param int $hook Hook suffix for the current admin page.
+ * only loads the custom stylesheet when the admin screen id is "page"
  */
-function selective_enqueue_scripts( $hook ) {
-    if ( 'edit.php' != $hook ) {
-        return;
-    }
-    wp_enqueue_script( 'my_custom_script', plugin_dir_url( __FILE__ ) . 'myscript.js', array(), '1.0' );
+ function cb_custom_admin_styles() {
+	//retrieve screen object
+    $screen = get_current_screen(); 
+	
+    //check if desired admin page
+	if ( $screen -> id != 'page' ) {
+		return;
+	}
+	wp_enqueue_style(
+		'cb-custom-admin-styles',
+		plugin_dir_url(__FILE__) . 'cb-custom-admin-styles.css',
+		'1.0'
+	);
 }
-add_action( 'admin_enqueue_scripts', 'wpdocs_selectively_enqueue_admin_script' );
+
+add_action( 'admin_enqueue_scripts', 'cb_custom_admin_styles' );
 ```
 ### Note: to find the hook for a given admin page use:
 ```php
-$screen = get_current_screen(); 
-print_r($screen);
+/**
+ * prints screen object inside body tag
+ */
+function wpdocs_this_screen() {
+    $screen = get_current_screen();
+    print_r($screen);
+}
+
+add_action( 'current_screen', 'wpdocs_this_screen' );
+
 ```

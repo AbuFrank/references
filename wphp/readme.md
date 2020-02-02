@@ -17,6 +17,7 @@ function creative_styles() {
 ```
 
 ## Custom Admin Scripts/Styles with Page Filter
+[wp codex](https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts)
 ```php
 /**
  * only loads the custom stylesheet when the admin screen id is "page"

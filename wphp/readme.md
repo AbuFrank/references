@@ -20,14 +20,11 @@ function creative_styles() {
 [wp codex](https://developer.wordpress.org/reference/hooks/admin_enqueue_scripts)
 ```php
 /**
- * only loads the custom stylesheet when the admin screen id is "page"
+ * only loads the custom stylesheet when in the admin "post" page
  */
- function cb_custom_admin_styles() {
-	//retrieve screen object
-    $screen = get_current_screen(); 
-	
-    //check if desired admin page
-	if ( $screen -> id != 'page' ) {
+ function cb_custom_admin_styles( $hook ) {
+	// skip this function if not editing a post
+	if ( 'post.php' != $hook ) {
 		return;
 	}
 	wp_enqueue_style(
@@ -38,6 +35,7 @@ function creative_styles() {
 }
 
 add_action( 'admin_enqueue_scripts', 'cb_custom_admin_styles' );
+
 ```
 ### Note: to find the hook for a given admin page use:
 ```php

@@ -71,6 +71,14 @@ example output:
 	336	/etc/sane.d
 	308	/etc/X11
 	268	/etc/ssl/certs/ca-certificates.crt
+	
+### list the immediate folders of working directory and their cummulative disk usage 
+
+	du -h --max-depth=1
+	
+### Show the programs that are dependent on a specific package (reverse dependencies)
+
+	apt-cache rdepends packagename
 
 ## 9. zip, gzip, tar
 

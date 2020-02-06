@@ -90,7 +90,11 @@ type zip or unzip alone to see a list of commands and general usage
 ### gzip
 unzip the .gz file and <ins>k</ins>eep it (don't delete original .gz)
 
-`gunzip -k file.zip`
+`gunzip -k file.gz`
+
+### tar
+
+`tar -xvf file.tar`
 
 ## 10. Clean up unused files and apt cache
 1. Clean up partial package

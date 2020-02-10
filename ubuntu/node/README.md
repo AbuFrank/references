@@ -1,5 +1,9 @@
 ## Install nvm
-[nvm git](https://github.com/nvm-sh/nvm)
+nvm is a node version manager. It allows you to use different versions of 
+
+node at will when juggling multiple projects with diferrent versions.
+
+[nvm git repo](https://github.com/nvm-sh/nvm)
 
 ### list all node versions
 `nvm ls-remote`

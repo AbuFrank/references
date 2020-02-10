@@ -92,6 +92,11 @@ unzip the .gz file and <ins>k</ins>eep it (don't delete original .gz)
 
 `gunzip -k file.gz`
 
+uncompress
+
+`gunzip -d file.gz`
+
+
 ### tar
 
 `tar -xvf file.tar`

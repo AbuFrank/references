@@ -1,6 +1,7 @@
 ## Table of Contents
 
 1. Template Literals
+2. Destructuring Assignment
 
 ## 1. Template Literals
 
@@ -48,3 +49,40 @@ Calculations:
   console.log(message);         // "10 items cost $2.50."
   ```
 The first `$` in `$${count}` is kept literal because there is no `{` following it
+
+## 2. Destructuring Assigment
+```js
+
+// object of interest
+var me = {
+  name: 'Khaled222',
+  age: 32
+}
+
+// function argument
+function greet({ name }) {
+  console.log('hello ' + name);
+}
+greet(me);
+
+// variable declaration
+var name = me.name;
+var age = me.age;
+
+// same as above
+var {name, age} = me
+
+var personName = me.name;
+var personage = me.age;
+
+// same as above
+var {name: personName, age: personAge} = me
+
+var someArr = ['khaled', 32];
+
+var name = someArr[0]
+var age = someArr[1]
+
+// same as above
+var [name, age] = someArr;
+```

@@ -14,6 +14,7 @@ Commonly used terminal commands for general file/directory interactions that are
 10. Clean up unused files and apt cache
 11. Find
 12. Path
+13. Groups
 
 
 ## 1. Moving multiple files at once
@@ -143,4 +144,13 @@ PATH="$PATH:/path/to/new/script/location"
 create a new alias called myalias
 ```bash
 alias myalias="sudo /opt/lampp/lampp start"
+```
+## 13. Groups
+```bash
+sudo apt install members //for easier member lists, optional
+sudo groupadd wordpress //creates a group called wordpress
+sudo usermod -a -G wordpress abufrank // append user abufrank to group wordpress
+sudo usermod -a -G wordpress daemon  // append user daemon to group wordpress
+members wordpress // check that users were added (lists members of group wordpress), optional
+subl /etc/group // to check group file directly
 ```

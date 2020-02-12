@@ -13,6 +13,7 @@ Commonly used terminal commands for general file/directory interactions that are
 9.  zip, gz, tar
 10. Clean up unused files and apt cache
 11. Find
+12. Path
 
 
 ## 1. Moving multiple files at once
@@ -132,4 +133,14 @@ find /dir/to/search/ -type f -name 'expression -and expression' -print
 ## The -or operator is the logical OR operator.  The expression evaluates ##
 ## to true if either the first or the second expression is true.          ##
 find /dir/to/search/ -type f -name 'expression -or expression' -print
+```
+## 12. Path
+located in /home/user/.bashrc
+add a new path to your script path
+```bash
+PATH="$PATH:/path/to/new/script/location"
+```
+create a new alias called myalias
+```bash
+alias myalias="sudo /opt/lampp/lampp start"
 ```

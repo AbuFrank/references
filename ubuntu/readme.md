@@ -2,16 +2,17 @@
 Commonly used terminal commands for general file/directory interactions that are infrequent enough to forget
 
 ## Contents
-1. Moving multiple files at once
-2. For checking existing installation packages
-3. Verify file integrity
-4. Show dependencies for a program
-5. Search keyword in repositories
-6. Search for installed libraries
-7. Create symbolic link, a shortcut
-8. Calculate disk usage for particular directories
-9. zip, gz, tar
+1.  Moving multiple files at once
+2.  For checking existing installation packages
+3.  Verify file integrity
+4.  Show dependencies for a program
+5.  Search keyword in repositories
+6.  Search for installed libraries
+7.  Create symbolic link, a shortcut
+8.  Calculate disk usage for particular directories
+9.  zip, gz, tar
 10. Clean up unused files and apt cache
+11. Find
 
 
 ## 1. Moving multiple files at once
@@ -114,3 +115,21 @@ uncompress
 4. Prevent uninstalled programs from leaving behind files
 
 	`sudo apt autoremove <application>`
+
+## 11. Find
+```bash
+## Basic syntax ##
+find /dir/to/search/ -options -name 'regex' -action
+find /dir/to/search/ -options -iname 'regex' -action
+find /dir/to/search/ -type f -name 'regex' -print
+find /dir/to/search/ -type f -name \( expression \) -print
+ 
+## ---------------------------------------------------------------------- ##
+## The -and operator is the logical AND operator                          ## 
+find /dir/to/search/ -type f -name 'expression -and expression' -print
+ 
+## ---------------------------------------------------------------------- ##
+## The -or operator is the logical OR operator.  The expression evaluates ##
+## to true if either the first or the second expression is true.          ##
+find /dir/to/search/ -type f -name 'expression -or expression' -print
+```

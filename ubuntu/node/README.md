@@ -9,10 +9,13 @@ node at will when juggling multiple projects with diferrent versions.
 `nvm ls-remote`
 
 ### install lastest major version
-`nv install <number>`
+`nvm install <number>`
 
 ### change which node the terminal is using
 `nvm use <number>`
 
 ### execute without installing, must have executable
 `npx <package> <arguments>`
+
+### display currently activated version of node
+`nvm current`

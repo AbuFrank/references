@@ -35,6 +35,7 @@ I always prefer this one as it shows other packages that has the pattern `vim` i
 
 ## 3. Verify file integrity
 	echo "8dd10000eb1b768800000e1d2fe1c3100005d2dc *filename" | sha1sum -c -
+for md5 use md5sum as the command instead
 
 ## 4. Show dependencies for a program
 	objdump -p /path/to/program | grep NEEDED

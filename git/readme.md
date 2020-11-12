@@ -1,3 +1,8 @@
+## Push an existing repository (when remote is empty)
+	git remote add origin https://github.com/AbuFrank/merng-client.git
+	git branch -M main
+	git push -u origin main
+
 ## Install the most recent version of git using launchpad
 
 	sudo add-apt-repository ppa:git-core/ppa

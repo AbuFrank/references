@@ -1,3 +1,13 @@
+## preprint for debugging
+```php
+$arr = array(1,2,3,4,5);
+echo '<pre>';
+print_r($arr);
+echo '</pre>';
+
+print_r($arr); 
+```
+
 ## Enque child stylesheet but load it after chosen parent styles
 
 ```php

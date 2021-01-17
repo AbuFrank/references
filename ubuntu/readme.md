@@ -14,7 +14,8 @@ Commonly used terminal commands for general file/directory interactions that are
 10. Clean up unused files and apt cache
 11. Find
 12. Path
-13. Groups
+13. Permissions
+14. Groups
 
 
 ## 1. Moving multiple files at once
@@ -126,6 +127,12 @@ find /dir/to/search/ -options -name 'regex' -action
 find /dir/to/search/ -options -iname 'regex' -action
 find /dir/to/search/ -type f -name 'regex' -print
 find /dir/to/search/ -type f -name \( expression \) -print
+
+## Example ##
+## Change directory permissions to - owner: rwx, group: r-x, world: r-x
+find /var/www/html -type d -exec chmod 755 {} \;
+## Change file permissions to - owner: rwx, group: r-x, world: r-x
+find /var/www/html -type f -exec chmod 644 {} \;
  
 ## ---------------------------------------------------------------------- ##
 ## The -and operator is the logical AND operator                          ## 
@@ -146,7 +153,25 @@ create a new alias called myalias
 ```bash
 alias myalias="sudo /opt/lampp/lampp start"
 ```
-## 13. Groups
+## 13. Permissions
+Instead of letters, the octal format represents privileges with numbers:
+
+* r(ead) has the value of 4
+* w(rite) has the value of 2
+* (e)x(ecute) has the value of 1
+* no permission has the value of 0
+
+The privileges are summed up and depicted by one number. Therefore, the possibilities are:
+
+* 7 – for read, write, and execute permission
+* 6 – for read and write privileges
+* 5 – for read and execute privileges
+* 4 – for read privileges
+
+e.g. set file.txt so that only owner can edit a file, group and world can only read  
+`chmod 644 file.txt`
+
+## 14. Groups
 ```bash
 sudo apt install members //for easier member lists, optional
 sudo groupadd wordpress //creates a group called wordpress

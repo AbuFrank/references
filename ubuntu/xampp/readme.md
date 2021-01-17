@@ -52,9 +52,7 @@ Restart xampp:
 
 # MySql
 
-## 1. How to change the root user name
-
-Log into mySQL 
+## 1. Log into mySQL 
 
 	/opt/lampp/bin/mysql -uroot -p
 

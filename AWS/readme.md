@@ -1,4 +1,6 @@
-## Elastic Beanstalk
+# Elastic Beanstalk
+
+## Overview
 
 set up a web app without worrying about infrastructure  
 no cost except for usage  
@@ -34,5 +36,13 @@ When creating EB env you have the choice of creating a database as well, when yo
 Usually only inside for development environment  
 Create the database with RDS first, then create the EB env. Then it will be **outside**
 
-
 ----
+
+## Cloud 9
+
+### Setup Ports
+
+find mac address  
+`curl -s http://169.254.169.254/latest/meta-data/mac`
+
+

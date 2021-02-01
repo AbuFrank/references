@@ -2,6 +2,7 @@
 1. Log network passes
 2. Memorize results for more efficient recursive functions
 3. Understanding the event loop and how promise, timeout get called
+4. How .map() is a specific case of .reduce()
 
 ## 1. log network passes
 ```js
@@ -58,7 +59,7 @@ ex 2 - Factorial:
       return n * recur(n - 1);
   });
   ```
-## 1. Understanding the event loop and how promise, timeout get called
+## 3. Understanding the event loop and how promise, timeout get called
   ```js
   // Line 1
   // executed immediately
@@ -85,3 +86,20 @@ ex 2 - Factorial:
   // Promise 3
   // Timeout 2
   ```
+## 4. How .map() is a specific case of .reduce()
+```js
+someArray = [1,2,3,4]
+
+// map
+const mappedArray = someArray.map((element) => {
+  return element + 1;
+});
+console.log(mappedArray); // returns [2,3,4,5]
+
+//reduce
+const reducedArray = someArray.reduce((incrArray, element) => {
+  incrArray.push(element + 1);
+  return incrArray;
+},[]); 
+console.log(reducedArray) //returns [2,3,4,5]
+```

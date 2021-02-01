@@ -1,6 +1,7 @@
 ## Table of Contents
 1. Log network passes
 2. Memorize results for more efficient recursive functions
+3. Understanding the event loop and how promise, timeout get called
 
 ## 1. log network passes
 ```js
@@ -56,4 +57,31 @@ ex 2 - Factorial:
   var factorial = memoizer([1,1], function (recur, n) {
       return n * recur(n - 1);
   });
+  ```
+## 1. Understanding the event loop and how promise, timeout get called
+  ```js
+  // Line 1
+  // executed immediately
+  console.log("Synchronous 1");
+  
+  // Line 2
+  // immediately invokes a timeout function
+  // that tf runs on the START of the NEXT event loop
+  setTimeout(_ => console.log("Timeout 2"), 0);
+  
+  // Line 3
+  // an immediately resolved promise
+  // handles the callback function at the END of the CURRENT event loop
+  Promise.resolve().then((_ => console.log("Promise 3"));
+  
+  // Line 4
+  // executed immediately
+  console.log("Synchronous 4");
+  ```
+  Expected Output: 
+  ```js
+  // Synchronous 1
+  // Synchronous 4
+  // Promise 3
+  // Timeout 2
   ```

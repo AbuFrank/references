@@ -1,0 +1,12 @@
+## setting up ssh explorer
+1. install the Remote - SSH extension
+2. click add new
+3. in the prompt type `ssh username@serveraddress`
+4. it will try to save a config hit okay for default
+5. when config is made, open it to add IdentityFile (private key usage)  
+  ```
+  Host host.exampleserver.net
+    HostName host.exampleserver.net
+    User username 
+    IdentityFile /home
+  ```

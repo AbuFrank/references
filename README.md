@@ -1,2 +1,2 @@
 # references
-Solutions that aren't exactly googleable
+Notes and friction points along the way

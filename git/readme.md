@@ -60,6 +60,9 @@ git reset <file>
 
 # Undo add .
 git reset
+
+# Undo cache
+git rm --cached FILENAME
 ```
 ## sample .gitignore
 ```

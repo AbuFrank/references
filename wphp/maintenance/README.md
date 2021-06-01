@@ -23,12 +23,16 @@ First, create the html landing page:
 </article>
 ```
 
-Then redirect all traffic except for your IP. replace 123.123.123.123 with your own public facing IP
+Then redirect all traffic except for your IP.  
+Replace 123.123.123.123 with your own public facing IP  
+Replace example.com with the url pointing to the directory root
+
+
 ```
 <IfModule mod_rewrite.c> 
 RewriteEngine On
 RewriteCond %{REMOTE_ADDR} !^123.123.123.123
 RewriteCond %{REQUEST_URI} !^/maintenance.html$
-RewriteRule ^(.*)$ http://rocktownhistory.com/maintenance.html [L]
+RewriteRule ^(.*)$ http://example.com/maintenance.html [L]
 </IfModule>
 ```

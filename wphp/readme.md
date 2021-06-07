@@ -60,3 +60,22 @@ function wpdocs_this_screen() {
 add_action( 'current_screen', 'wpdocs_this_screen' );
 
 ```
+
+## background overlay for BS collapse menu (JS)
+
+```js
+// cache toggle button and body
+let backgroundToggle = document.getElementById("background-toggle-button");
+let domBody = document.body;
+
+// callback function for adding/removing css class
+const toggleBackground = () => {
+  domBody.classList.toggle("show-menu");
+};
+
+if (!!backgroundToggle) {
+  backgroundToggle.addEventListener("click", toggleBackground, false);
+} else {
+  console.error("Button not found, cannot apply background to body");
+}
+```

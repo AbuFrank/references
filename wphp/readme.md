@@ -64,18 +64,38 @@ add_action( 'current_screen', 'wpdocs_this_screen' );
 ## background overlay for BS collapse menu (JS)
 
 ```js
-// cache toggle button and body
-let backgroundToggle = document.getElementById("background-toggle-button");
-let domBody = document.body;
+jQuery(document).ready(function($) {
+    // backdrop behind shown menu
+    const menuBackdrop = $( '#nav-drawer-background' );
+    // collapsing element
+    const navbarCollapse = $( '#headerNavbarCollapse' );
+    // collapsing content inner wrapper
+    const innerCollapseContainer = $( '#headerNavbarCollapse .inner-collapse-container' );
+    // collapse toggle button
+    const collapseToggle = $( '#menu-toggle-button' );
+    const domBody = $('body');
 
-// callback function for adding/removing css class
-const toggleBackground = () => {
-  domBody.classList.toggle("show-menu");
-};
-
-if (!!backgroundToggle) {
-  backgroundToggle.addEventListener("click", toggleBackground, false);
-} else {
-  console.error("Button not found, cannot apply background to body");
-}
+    // shows the backdrop
+    const handleToggleShow = () => {
+        navbarCollapse.show(0, () => {
+            domBody.addClass( 'show-menu' );   
+            innerCollapseContainer.removeClass('slide-out').addClass('slide-in');
+            menuBackdrop.fadeIn(350);
+        });
+    }
+    // hides the backdrop
+    const handleToggleHide = () => {
+        // remove the show-menu class after the fade-out animation
+        menuBackdrop.fadeOut(350, () =>  {
+            domBody.removeClass( 'show-menu' );
+            navbarCollapse.hide();
+        } );
+        innerCollapseContainer.removeClass('slide-in').addClass('slide-out');
+    }
+    // emulate nav toggle button click when background is clicked
+    menuBackdrop.on( 'click', () => collapseToggle.trigger( 'click' ) );
+    // hook into BS event triggers
+    navbarCollapse.on( 'show.bs.collapse', handleToggleShow );
+    navbarCollapse.on( 'hide.bs.collapse', handleToggleHide );
+})
 ```
